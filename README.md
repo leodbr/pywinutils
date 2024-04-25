@@ -1,7 +1,9 @@
 # pywinutils
-Python tools I make for Windows 10/11
+Collection of Python tools I make for Windows 10/11.
 
-# How to use :
+winactivator.py is a simple tool created to activate Windows 10/11 using KMS.
+
+# How to use :  
 -> Python 3.X required
 
 -> pip install -r requirements.txt
