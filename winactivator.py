@@ -37,7 +37,7 @@ def choice_key() :
     〚9〛Windows 10/11 Enterprise
     〚10〛Windows 10/11 Enterprise N
     〚11〛Windows 10/11 Enterprise G
-    〚12〛Windows 10/11 Enterprice G N
+    〚12〛Windows 10/11 Enterprise G N
     \nSelect your Windows version : """, Colors.green, interval=0.005))
     if not 0 <= choice <= 12 :
         system('CLS')
@@ -48,9 +48,7 @@ def choice_key() :
 
 def choice_server() :
     system('CLS')
-    choice = int(Write.Input("All Online KMS Servers :\n\n" +
-                         "\n".join([f"    〚{i+1}〛{server}" for i, server in enumerate(servers)]) +
-                         "\n\nSelect the KMS Server you want : ", Colors.green, interval=0.005))
+    choice = int(Write.Input("All Online KMS Servers :\n\n"+"\n".join([f"    〚{i+1}〛{server}" for i, server in enumerate(servers)])+"\n\nSelect the KMS Server you want : ", Colors.green, interval=0.005))
     if not 1 <= choice <= 16 :
         system('CLS')
         print("Your choice for the KMS Server isn't between 1 and 16, try again in 5 seconds.\n")
@@ -60,7 +58,7 @@ def choice_server() :
 
 def enable_windows(key, server) :
     system('CLS')
-    print(f'Your key : {key} will be activated on {server} KMS server.\nWait for 20-30 seconds and Windows should be enabled.')
+    print(f'Your key : {key} will be activated on {server} KMS server.\nWait for 20-30 seconds and Windows should be activated.')
     system(f'slmgr /ipk {key}')
     system(f'slmgr /skms {server}')
     system('slmgr /ato')
